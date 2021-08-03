@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMSUNG</title>
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+    *{
+        font-family: 'Noto Sans KR', sans-serif;
+        box-sizing: border-box;
+    }
+    .navbar{
+            background-color: white;
+    }
+    .navbar a{
+        color: black !important;
+    }
+    .carousel-caption{
+        position: absoulte;
+        left: -500px;
+        top: 280px;
+    }
+    .carousel-caption>h3{
+        font-size: 50px;
+    }
+    .carousel-caption>p{
+        font-size: 25px;
+    }
+    .img_pc, .caption_pc, #vid, #sitemap, .footer-pc{display: block !important;}
+    .img_mobile, .caption_mobile, #vid_mobile, #sitemap_mobile, .footer-mobile{display: none !important;}
+    .carousel-indicators li{
+        text-indent: 0 !important;
+        border: none;
+        width: 150px;
+        height: 10px;
+        color: white;
+    }
+    .carousel-indicators .active{
+        width:150px;
+        height: 10px;;
+        background-color: rgba(0,0,0,0);
+    }
+    .col-sm-3 img{
+        width: 100%;
+        height: 100%;
+    }
+    #sitemap ul, .panel ul{
+        list-style-type: none;
+        margin-left: -40px;
+    }
+    .panel ul li{
+        padding-top: 5px;
+    }
+    .border-right{
+        border-right: 1px solid #D9D9D9;
+    }
+    .col-sm-2{
+        padding: 0px 30px 0px 30px;
+        height: 280px;
+    }
+    .col-sm-2 h3{
+        font-size: 20px;
+    }
+    #footer>.container{
+        padding: 10px 0px 20px 0px;
+    }
+    #footer>.container div{
+        line-height: 25px;
+    }
+    #sitemap_mobile{
+        padding-top: 10px;
+    }
+    .footer-mobile{
+        margin-top: -20px;
+    }
+    .comp a{
+        display: inline-block;
+        width: 94px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        background: #a6a6a6;
+        border-radius: 10px;
+        border: 1px solid #a6a6a6;
+    }
+    @media screen and (max-width: 768px) {
+        .img_pc, .caption_pc, #vid, #sitemap, .carousel-indicators, .footer-pc{display: none !important;}
+        .img_mobile, .caption_mobile, #vid_mobile, #sitemap_mobile, .footer-mobile{display: block !important;}
+        .carousel-caption{
+            top: 0 !important;
+            width: 100% !important;
+            left: 0;
+            text-align: center !important;
+        }
+        .carousel-caption>h3{
+            padding-top: 20px;
+            font-size: 40px;
+        }
+        .carousel-caption>p{
+            font-size: 15px;
+        }
+    }
+    </style>
+    <script type="text/javascript">
+        // iframe resize
+        function autoResize(i)
+        {
+            (i).height=0;
+            var iframeHeight=
+            (i).contentWindow.document.body.scrollHeight;
+            (i).height=iframeHeight+20;
+        }
+    </script>
+</head>
+<body>
+    <!-- 네비게이션 ------------------------------------------------------------------------------->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                       
+            </button>
+            <a class="navbar-brand" href="#myPage">
+                <img src="img/logo.svg" alt="삼성로고">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse.in">제품</a></li>
+              <li><a href="#history" data-toggle="collapse" data-target=".navbar-collapse.in">기획전</a></li>
+              <li><a href="#course" data-toggle="collapse" data-target=".navbar-collapse.in">스토리</a></li>
+              <li><a href="#map" data-toggle="collapse" data-target=".navbar-collapse.in">고객서비스</a></li>
+              <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse.in">멤버쉽</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- 캐러셀 ------------------------------------------------------------------------------->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active">새로운 Galaxy</li>
+            <li data-target="#myCarousel" data-slide-to="1">Galaxy S21 5G</li>
+            <li data-target="#myCarousel" data-slide-to="2">BESPOKE제트</li>
+            <li data-target="#myCarousel" data-slide-to="3">BESPOKE냉장고</li>   
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div id="vid">
+                    <video autoplay loop muted width="100%" height="100%">
+                        <source src="img/galaxy.webm" type="video/mp4"/>
+                    </video>
+                </div>
+                <div id="vid_mobile">
+                    <video autoplay loop muted width="100%" height="100%">
+                        <source src="img/galaxy_mobile.webm" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="carousel-caption caption_pc">
+                    <h3>새로운 Galaxy
+                    <br>
+                    사전판매 알림신청
+                    </h3>
+                    <p>알림 신청 후 사전 구매 시 네이버페이 포인트 더블 적립!</p>
+                </div>
+                <div class="carousel-caption caption_mobile">
+                    <h3>새로운 Galaxy
+                    <br>
+                    사전판매 알림신청
+                    </h3>
+                    <p>알림 신청 후 사전 구매 시 네이버페이 포인트 더블 적립!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img class="img_pc" src="img/img01_pc.webp" alt="Galaxy S21">
+                <img class="img_mobile" src="img/img01_mobile.webp" alt="Galaxy S21">
+                <div class="carousel-caption caption_pc">
+                <h3>Galaxy S21 I S21+
+                    <br>
+                    S21 Ultra 5G
+                </h3>
+                <p>지금 삼성닷컴에서 중고폰 추가보상 혜택으로 만나보세요!</p>
+                </div>
+                <div class="carousel-caption caption_mobile">
+                    <h3>Galaxy S21 I S21+
+                    <br>
+                    S21 Ultra 5G
+                </h3>
+                <p>지금 삼성닷컴에서 중고폰 추가보상 혜택으로 만나보세요!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img class="img_pc" src="img/img02_pc.webp" alt="BESPOKE 제트">
+                <img class="img_mobile" src="img/img02_mobile.webp" alt="BESPOKE 제트">
+                <div class="carousel-caption caption_pc" style="color:black;">
+                    <h3>BESPOKE 제트 런칭</h3>
+                    <p>최대 18만 혜택 받고
+                    <br>
+                    새로워진 삼성 BESPOKE 제트를 만나보세요
+                    </p>
+                </div>
+                <div class="carousel-caption caption_mobile" style="color:black;">
+                    <h3>BESPOKE 제트 런칭</h3>
+                    <p>최대 18만 혜택 받고
+                    <br>
+                    새로워진 삼성 BESPOKE 제트를 만나보세요
+                    </p>
+                </div>
+            </div>
+        
+            <div class="item">
+                <img class="img_pc" src="img/img03_pc.webp" alt="BESPOKE 냉장고">
+                <img class="img_mobile" src="img/img03_mobile.webp" alt="BESPOKE 냉장고">
+                <div class="carousel-caption caption_pc" style="color:black;">
+                    <h3>2021 New
+                    <br>
+                    BESPOKE 냉장고
+                    </h3>
+                    <p>2021 새로운 컬러와 삼성닷컴 단독 혜택을 만나보세요</p>
+                </div>
+                <div class="carousel-caption caption_mobile" style="color:black;">
+                    <h3>2021 New
+                    <br>
+                    BESPOKE 냉장고
+                    </h3>
+                    <p>2021 새로운 컬러와 삼성닷컴 단독 혜택을 만나보세요</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- 캐러셀 -->
+    <!-- 메뉴아이콘 ------------------------------------------------------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic01_pc.webp" alt="Trade-In">
+                <img class="img_mobile" src="img/pic01_mobile.webp" alt="Trade-In">
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic02_pc.webp" alt="갤럭시 캠퍼스 스토어">
+                <img class="img_mobile" src="img/pic02_mobile.webp" alt="갤럭시 캠퍼스 스토어">
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic03_pc.webp" alt="웨딩|신혼 샵">
+                <img class="img_mobile" src="img/pic03_mobile.webp" alt="웨딩|신혼 샵">
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic04_pc.webp" alt="추천모델">
+                <img class="img_mobile" src="img/pic04_mobile.webp" alt="추천모델">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic05_pc.webp" alt="Trade-In">
+                <img class="img_mobile" src="img/pic05_mobile.webp" alt="Trade-In">
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic06_pc.webp" alt="갤럭시 캠퍼스 스토어">
+                <img class="img_mobile" src="img/pic06_mobile.webp" alt="갤럭시 캠퍼스 스토어">
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic07_pc.webp" alt="웨딩|신혼 샵">
+                <img class="img_mobile" src="img/pic07_mobile.webp" alt="웨딩|신혼 샵">
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <img class="img_pc" src="img/pic08_pc.webp" alt="추천모델">
+                <img class="img_mobile" src="img/pic08_mobile.webp" alt="추천모델">
+            </div>
+        </div>
+    </div>
+    <!-- 메뉴아이콘 -->
+    <!-- 게시판 ------------------------------------------------------------------------------->
+    <div class="container" id="board">
+        <h3 class="text-center"><b>자주 묻는 질문</b></h3>
+        <iframe id="iframe1" src="http://blanc22.dothome.co.kr/g5/bbs/board.php?bo_table=board01" width="100%" onload="autoResize(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </div>
+    <!-- 게시판 -->
+    <!-- 사이트맵 ------------------------------------------------------------------------------->
+    <div id="sitemap" class="container-fluid" style="margin: 10px;border-top: 1px solid #D9D9D9; border-bottom: 1px solid #D9D9D9;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h3>제품</h3>
+                    <ul>
+                        <li>스마트폰</li>
+                        <li>태블릿</li>
+                        <li>워치</li>
+                        <li>버즈</li>
+                        <li>TV</li>
+                        <li>Lifestyle TV</li>
+                        <li>BESPOKE</li>
+                        <li>냉장고</li>
+                        <li>김치냉장고</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 border-right">
+                    <br><br><br>
+                    <ul>
+                        <li>오븐/전자레인지</li>
+                        <li>식기세척기</li>
+                        <li>에어컨</li>
+                        <li>세탁기</li>
+                        <li>건조기</li>
+                        <li>청소기</li>
+                        <li>공기청정기</li>
+                        <li>갤럭시 북</li>
+                        <li>프린터</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 border-right">
+                    <h3>고객서비스</h3>
+                    <ul>
+                        <li>삼성닷컴 FAQ</li>
+                        <li>이메일상담</li>
+                        <li>매장 찾기</li>
+                        <li>서비스센터 찾기</li>
+                        <li>디지털프라자</li>
+                        <li>MD 비지니스 협력제안</li>
+                        <li>비지니스 협력제안</li>
+                        <li>삼성멤버스 커뮤니티</li>
+                        <li>E-카탈로그</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 border-right">
+                    <h3>부가정보</h3>
+                    <ul>
+                        <li>데이코</li>
+                        <li>뉴스룸</li>
+                        <li>디자인 삼성</li>
+                        <li>삼성전자 사회공헌</li>
+                        <li>협력회사 사이버 신문고</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2 border-right">
+                    <h3>기업정보</h3>
+                    <ul>
+                        <li>회사소개</li>
+                        <li>투자자 정보</li>
+                        <li>공지사항</li>
+                        <li>제품 접근성</li>
+                        <li>배당조회</li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h3>윤리&준법경영</h3>
+                    <ul>
+                        <li>경영원칙</li>
+                        <li>부정제보</li>
+                        <li>법위반제보</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 사이트맵모바일 ------------------------------------------------------------------------------->
+    <div id="sitemap_mobile" class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">제품</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li>스마트폰</li>
+                            <li>태블릿</li>
+                            <li>워치</li>
+                            <li>버즈</li>
+                            <li>TV</li>
+                            <li>Lifestyle TV</li>
+                            <li>BESPOKE</li>
+                            <li>냉장고</li>
+                            <li>김치냉장고</li>
+                            <li>오븐/전자레인지</li>
+                            <li>식기세척기</li>
+                            <li>에어컨</li>
+                            <li>세탁기</li>
+                            <li>건조기</li>
+                            <li>청소기</li>
+                            <li>공기청정기</li>
+                            <li>갤럭시 북</li>
+                            <li>프린터</li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">고객서비스</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li>삼성닷컴 FAQ</li>
+                            <li>이메일상담</li>
+                            <li>매장 찾기</li>
+                            <li>서비스센터 찾기</li>
+                            <li>디지털프라자</li>
+                            <li>MD 비지니스 협력제안</li>
+                            <li>비지니스 협력제안</li>
+                            <li>삼성멤버스 커뮤니티</li>
+                            <li>E-카탈로그</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">부가정보</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li>데이코</li>
+                            <li>뉴스룸</li>
+                            <li>디자인 삼성</li>
+                            <li>삼성전자 사회공헌</li>
+                            <li>협력회사 사이버 신문고</li>
+                            <li>폐카트리지 회수신청</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">기업정보</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li>회사소개</li>
+                            <li>투자자 정보</li>
+                            <li>공지사항</li>
+                            <li>제품 접근성</li>
+                            <li>배당조회</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">윤리&준법경영</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li>경영원칙</li>
+                            <li>부정제보</li>
+                            <li>법위반제보</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 사이트맵 -->
+    <!-- footer ------------------------------------------------------------------------------->
+    <div id="footer" class="container-fluid">
+        <div class="container footer-pc">
+            <div>삼성전자 주식회사 대표이사 : 김기남 | 사업자등록번호 : 124-81-00998 <span class="comp"><a href="#">사업자 정보확인</a></span> | 통신판매업 신고 : 2000-경기수원-0515</div>
+            <div>사업장주소 : 경기도 수원시 영통구 삼성로 129(매탄동) | 호스팅서비스사업자 : 한국아이비엠(주) | 대표번호 : 02-2255-0114 | 제품/서비스/멤버십: 1588-3366 | 구매문의 : 1588-6084</div>
+            <div>본 사이트에서 판매되는 상품 중에는 등록된 개별 판매자가 판매하는 상품이 포함되어 있습니다.</div>
+            <div>개별 판매자 판매 상품의 경우 삼성전자(주)는 통신판매중개업자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 상품, 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</div>
+            <div>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을 금합니다.</div>
+            <div>Copyright © 1995-2021 Samsung. All Rights Reserved.</div>
+        </div>
+        <div class="container footer-mobile">
+            <div>Copyright © 1995-2021 Samsung. All Rights Reserved.</div>
+        </div>
+    </div>
+    <!-- footer -->
+</body>
+</html>
