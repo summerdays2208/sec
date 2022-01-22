@@ -111,4 +111,4 @@
 ```
 
 ### 🏷URL
-http://blanc22.dothome.co.kr/sec/
+http://leap22.dothome.co.kr/sec/
